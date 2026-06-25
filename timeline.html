@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Through Time</title>
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+    body{
+        margin:0;
+        font-family:Georgia, serif;
+        background:linear-gradient(to bottom,#f8f5ef,#ede8dc);
+        color:#2c2c2c;
+        line-height:1.8;
+    }
+
+   header{
+    background: linear-gradient(rgba(232,225,211,0.92),
+                                rgba(232,225,211,0.92)),
+                url('homepage_collage.png');
+    background-size: cover;
+    background-position: center;
+    text-align:center;
+    padding:90px 20px;
+    border-bottom:5px solid #d9c9a3;
+   box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
+}
+
+    h1{
+    font-size:4.5rem;
+    margin:0;
+    color:#4a6741;
+    letter-spacing:4px;
+    text-shadow:3px 3px 8px rgba(255,255,255,0.8);
+    font-size:4.5rem;
+    letter-spacing:5px;
+    text-shadow:3px 3px 10px rgba(255,255,255,0.9);
+}
+.subtitle{
+    margin-top:15px;
+    font-size:1.4rem;
+    color:#555;
+    font-style:italic;
+}
+
+    .container{
+    position:relative;   
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+    position:relative;
+}
+
+.container::before{
+    content:"";
+    position:absolute;
+    left:35px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#d9c9a3;
+    z-index:0;
+}
+    
+.card{
+    background:white;
+    padding:30px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+h2{
+    text-align:center;
+    color:#5c6b4f;
+    font-size:3rem;
+    margin:100px auto 60px auto;
+    width:80%;
+    border-bottom:3px solid #d9c9a3;
+    padding-bottom:20px;
+    letter-spacing:2px;
+}
+    .home-link{
+        display:inline-block;
+        margin-bottom:30px;
+        padding:12px 20px;
+        background:#d9e5ec;
+        color:#2c2c2c;
+        text-decoration:none;
+        border-radius:10px;
+        font-weight:bold;
+    }
+.timeline-card{
+    background:white;
+    border-radius:25px;
+    padding:45px;
+    margin:70px auto;
+    margin-left:90px;
+    max-width:1150px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+    border-left:8px solid #9d9e5c;
+    transition:all 0.3s ease;
+    position:relative;
+    z-index:1;
+}
+    .timeline-card::before{
+    content:"";
+    position:absolute;
+    top:45px;
+    left:-19px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#9d9e5c;
+    border:4px solid white;
+    box-shadow:0 0 0 4px #d9c9a3;
+
+}
+
+
+
+
+.timeline-card:hover{
+    cursor:pointer;
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
+
+.timeline-card h3{
+    color:#4a6741;
+    margin-top:0;
+    margin-bottom:20px;
+    font-size:2rem;
+    letter-spacing:1px;
+}
+
+.timeline-card .date{
+font-style:italic;
+color:#777;
+}
+
+.timeline-card .subject{
+font-weight:bold;
+color:#6d8b74;
+}
+
+.resources{
+margin-top:20px;
+}
+
+.resources p{
+margin:10px 0;
+}
+
+.resources a{
+    display:inline-block;
+    margin:8px 0;
+    padding:10px 18px;
+    background:#e8e1d3;
+    color:#4a6741;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:all 0.3s ease;
+}
+
+.resources a:hover{
+    background:#9d9e5c;
+    color:white;
+    transform:translateX(8px);
+}
+
+.resources a:hover{
+text-decoration:underline;
+}
+.container::before{
+    content:"";
+    position:absolute;
+    left:35px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#d9c9a3;
+    z-index:0;
+}
+.museum-nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+}
+
+.museum-nav a{
+    background:white;
+    color:#4a6741;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:all 0.3s ease;
+}
+
+.museum-nav a:hover{
+    background:#d9c9a3;
+    transform:translateY(-3px);
+}
+
+.back-to-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+   background:#4a6741;
+color:#f8f5ef;
+    text-decoration:none;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    z-index:9999;
+    transition:all 0.3s ease;
+}
+
+.back-to-top:hover{
+    background:#9d9e5c;
+    transform:translateY(-3px);
+}
+
+.period-banner{
+    display:block;
+    width:96%;
+    max-width:1100px;
+    margin:70px auto 25px auto;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.18);
+}
+.card-content{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.card-main{
+    width:100%;
+}
+
+.card-side{
+    width:100%;
+}
+
+@media (max-width:900px){
+    .card-content{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+ <header id="top">
+    <h1>TIMELINE</h1>
+    <p class="subtitle">
+        Explore Human Development Through Time
+    </p>
+    <nav class="museum-nav">
+    <a href="#prehistory">Prehistory</a>
+    <a href="#ancient">Ancient World</a>
+    <a href="#middle">Middle Ages</a>
+    <a href="#modern">Modern Age</a>
+    <a href="#contemporary">Contemporary World</a>
+</nav>
+</header>
+
+  
+
+
+  <a href="index.html" class="home-link">← Back to Home</a>
+<div class="container">
+  
+
+<img src="assets/banners/01_prehistory.png"
+     class="period-banner"
+     alt="Prehistory Banner">
+
+<h2 id="prehistory">Prehistory</h2>
+<div class="timeline-card">
+
+<h3>PREHISTORY</h3>
+
+<p class="date">c. 2.5 million BCE – c. 3000 BCE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+Prehistory is the longest period in human history, beginning with the appearance of the first humans and ending with the invention of writing. During this time, people developed tools, discovered fire and gradually transformed their way of life, laying the foundations for future civilizations.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/001_01.pdf" target="_blank">
+🖼️ View Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/001_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+</div>
+</div>
+
+<div class="timeline-card">
+
+<h3>PALEOLITHIC</h3>
+
+<p class="date">c. 2.5 million BCE – c. 10,000 BCE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+During the Paleolithic Age, humans lived as hunter-gatherers, moving from place to place in search of food. They used stone tools, discovered fire and created the first forms of art, such as cave paintings.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/002_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/002_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>NEOLITHIC REVOLUTION</h3>
+
+<p class="date">c. 10,000 BCE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Neolithic Revolution marked the transition from a nomadic lifestyle to a sedentary way of life. Humans began to cultivate crops, domesticate animals and establish permanent settlements, leading to the development of the first villages.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/003_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/003_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>ANCIENT GAMES</h3>
+
+<p class="date">c. 776 BCE</p>
+
+<p class="subject">Subject: Physical Education</p>
+
+<p>
+The Ancient Olympic Games were first celebrated in Olympia, Greece, in honour of Zeus. Athletes competed in events such as running, wrestling, boxing and discus throwing. These games promoted physical fitness, fair play and unity among the Greek city-states.
+</p>
+
+<div class="resources">
+
+<p>
+<p>
+<a href="assets/images/timeline/004_01.pdf" target="_blank">
+🖼️ Open Banner
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/004_02.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/004_03.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/004_04.pdf" target="_blank">
+🖼️ Open Illustration 3
+</a>
+</p>
+
+
+<audio controls>
+<source src="assets/audio/004_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<img src="assets/banners/02_ancient_world.png"
+     class="period-banner"
+     id="ancient"
+     alt="Ancient World Banner">
+
+<h2>Ancient World</h2>
+
+<div class="timeline-card">
+
+<h3>EGYPTIAN PYRAMIDS</h3>
+
+<p class="date">c. 2600 BCE – c. 2500 BCE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Egyptian pyramids were monumental tombs built for pharaohs during the Old Kingdom. The most famous pyramids, located at Giza, demonstrate the advanced engineering, architectural knowledge and religious beliefs of Ancient Egyptian civilization.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/005_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/005_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/005_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>MEDITERRANEAN CLIMATE AND THE RISE OF MEDITERRANEAN TRADE</h3>
+
+<p class="date">Ancient Times – Present</p>
+
+<p class="subject">Subject: Geography</p>
+
+<p>
+The Mediterranean climate, characterized by hot dry summers and mild wet winters, favoured agriculture, population growth and maritime trade. These conditions contributed to the development of important civilizations and commercial routes across the Mediterranean Sea.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/006_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/006_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/006_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>HIPPOCRATES AND HEALTHY DIETS</h3>
+
+<p class="date">c. 460 BCE – c. 370 BCE</p>
+
+<p class="subject">Subject: Physical Education</p>
+
+<p>
+Hippocrates, often considered the father of medicine, emphasized the importance of balanced nutrition and healthy habits. His ideas about diet, exercise and lifestyle laid the foundations for preventive medicine and continue to influence health education today.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/007_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/007_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/007_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>FROM LATIN TO SPANISH</h3>
+
+<p class="date">From the Roman Period to the Present</p>
+
+<p class="subject">Subject: Spanish Language and Literature</p>
+
+<p>
+Spanish evolved from Vulgar Latin, the language spoken by Roman soldiers and settlers in the Iberian Peninsula. Over centuries, the language incorporated influences from Visigothic, Arabic and other languages, eventually developing into modern Spanish.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/008_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/008_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/008_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇪🇸</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="timeline-card">
+<h3>CELTIC INFLUENCE ON ENGLISH</h3>
+
+<p class="date">Before the 5th century CE</p>
+
+<p class="subject">Subject: English</p>
+
+<p>
+The Celtic peoples were among the earliest inhabitants of the British Isles. Although their influence on English vocabulary was limited, many place names and geographical terms of Celtic origin are still used in modern English.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/009_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/009_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>LATIN INFLUENCE ON ENGLISH</h3>
+
+<p class="date">From the Roman Period onwards</p>
+
+<p class="subject">Subject: English</p>
+
+<p>
+Latin has had a profound influence on the English language. Thousands of English words related to science, religion, education and law derive from Latin, enriching the vocabulary and shaping the development of English throughout history.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/010_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/010_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>AL-ANDALUS</h3>
+
+<p class="date">711 CE – 1492 CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+Al-Andalus was the Muslim territory established in the Iberian Peninsula after the Islamic conquest of 711. It became a centre of cultural exchange, scientific progress and artistic development, where Muslim, Christian and Jewish communities coexisted for centuries.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/011_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/011_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/011_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>VIKING INVASIONS</h3>
+
+<p class="date">8th – 11th centuries CE</p>
+
+<p class="subject">Subject: English</p>
+
+<p>
+The Viking invasions had a significant impact on the development of the English language and culture. Scandinavian settlers introduced many everyday words into Old English, many of which are still used in modern English today.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/012_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/012_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>L'EMPIRE CAROLINGIEN</h3>
+
+<p class="date">800 CE</p>
+
+<p class="subject">Subject: French</p>
+
+<p>
+The Carolingian Empire was established by Charlemagne, who was crowned Emperor in 800 CE. His reign promoted education, culture and political unity across much of Western Europe, laying important foundations for medieval European civilization.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/013_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/013_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇫🇷</p>
+
+</div>
+
+</div>
+
+<img src="assets/banners/03_middle_ages.png"
+     class="period-banner"
+     id="middle"
+     alt="Middle Ages Banner">
+
+<h2>Middle Ages</h2>
+<div class="timeline-card">
+
+<h3>MEDIEVAL CITIES</h3>
+
+<p class="date">11th – 15th centuries CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+During the Middle Ages, towns and cities grew as centres of trade, craftsmanship and social life. Medieval cities were often protected by walls and featured markets, guilds and important religious buildings such as cathedrals.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/014_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/014_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/014_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>NORMAN CONQUEST</h3>
+
+<p class="date">1066 CE</p>
+
+<p class="subject">Subject: English</p>
+
+<p>
+The Norman Conquest began in 1066 when William the Conqueror invaded England. This event profoundly influenced English society, politics and language, introducing thousands of French words into English vocabulary.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/015_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/015_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>FEUDAL SOCIETY</h3>
+
+<p class="date">9th – 15th centuries CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+Feudal society was organised around a hierarchical system based on land ownership and loyalty. Kings granted land to nobles, who in turn relied on knights and peasants. This system shaped medieval political and social structures for centuries.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/016_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/016_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/016_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>GOTHIC ARCHITECTURE</h3>
+
+<p class="date">12th – 16th centuries CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+Gothic architecture emerged in medieval Europe and is characterised by pointed arches, ribbed vaults and large stained-glass windows. Magnificent cathedrals such as Notre-Dame de Paris are among the most famous examples of this artistic style.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/017_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/017_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+
+</div>
+
+
+<img src="assets/banners/05_age_of_revolutions.png"
+     class="period-banner"
+     id="modern"
+     alt="Modern Age Banner">
+
+<h2>Age of Revolutions</h2>
+
+<div class="timeline-card">
+<h3>THE AGE OF EXPLORATION</h3>
+
+<p class="date">15th – 17th centuries CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Age of Exploration was a period of overseas expansion during which European explorers travelled across oceans to discover new trade routes and territories. These voyages connected continents and transformed global history.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/018_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/018_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/018_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>THE WATER CYCLE</h3>
+
+<p class="date">16th – 18th centuries CE</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Scientific Revolution was a period of major advances in science and knowledge. Thinkers such as Copernicus, Galileo and Newton transformed the understanding of the universe through observation, experimentation and reason.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/019_01.pdf" target="_blank">
+Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/019_02.pdf" target="_blank">
+Open Illustration 2
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/019_03.pdf" target="_blank">
+Open Illustration 3
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/019_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>DISCOVERY OF CELLS</h3>
+
+<p class="date">1665 🧫 Present Day</p>
+
+<p class="subject">Subject: Biology and Geology</p>
+
+<p>
+The discovery of cells began in 1665 when Robert Hooke observed cork under a microscope. Later, scientists such as Schleiden, Schwann and Virchow developed the Cell Theory, establishing that all living organisms are made up of cells.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/020_01.pdf" target="_blank">
+Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/020_02.pdf" target="_blank">
+Open Illustration 2
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/020_03.pdf" target="_blank">
+Open Illustration 3
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/020_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>CLASSIFICATION OF LIVING BEINGS</h3>
+
+<p class="date">18th Century 🧬 Present Day</p>
+
+<p class="subject">Subject: Biology and Geology</p>
+
+<p>
+Scientists classify living beings into groups according to their characteristics and evolutionary relationships. Modern classification systems help us understand biodiversity and the relationships among organisms.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/021_01.pdf" target="_blank">
+Open Illustration
+</a>
+</p>
+
+<h4>🎥 Videos</h4>
+
+<p><a href="assets/video/021_01.mp4" target="_blank">▶ Video 1</a></p>
+
+<p><a href="assets/video/021_02.mp4" target="_blank">▶ Video 2</a></p>
+
+<p><a href="assets/video/021_03.mp4" target="_blank">▶ Video 3</a></p>
+
+<p><a href="assets/video/021_04.mp4" target="_blank">▶ Video 4</a></p>
+
+<p><a href="assets/video/021_05.mp4" target="_blank">▶ Video 5</a></p>
+
+<audio controls>
+<source src="assets/audio/021_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>LA RÉVOLUTION FRANÇAISE</h3>
+
+<p class="date">1789 CE</p>
+
+<p class="subject">Subject: French</p>
+
+<p>
+The French Revolution began in 1789 and profoundly changed French society. It marked the end of absolute monarchy and promoted ideals such as liberty, equality and fraternity, which influenced democratic movements around the world.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/022_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/022_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇫🇷</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>LA DÉCLARATION DES DROITS DE L'HOMME ET DU CITOYEN</h3>
+
+<p class="date">1789 CE</p>
+
+<p class="subject">Subject: French</p>
+
+<p>
+Adopted during the French Revolution, the Declaration of the Rights of Man and of the Citizen established fundamental rights such as freedom, equality before the law and popular sovereignty. It remains one of the most influential documents in modern history.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/023_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/023_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇫🇷</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>LA MARSEILLAISE</h3>
+
+<p class="date">1792</p>
+
+<p class="subject">Subject: French</p>
+
+<p>
+La Marseillaise is the national anthem of France. It was written in 1792 during the French Revolution and quickly became a symbol of liberty, patriotism and national unity. Today, it remains one of the most famous national anthems in the world.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/024_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/024_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+
+<img src="assets/banners/06_contemporary_world.png"
+     class="period-banner"
+     id="contemporary"
+     alt="Contemporary World Banner">
+
+<h2>Contemporary World</h2>
+
+<div class="timeline-card">
+<h3>THE RISE OF OUTDOOR PHYSICAL ACTIVITIES</h3>
+
+<p class="date">Present Day</p>
+
+<p class="subject">Subject: Geography and Geology</p>
+
+<p>
+Outdoor physical activities have become increasingly popular in recent decades. Activities such as hiking, trail running, climbing and cycling promote healthy lifestyles while encouraging contact with nature.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/025_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/025_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/025_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>THE ORIGIN OF BOULDERING</h3>
+
+<p class="date">21st Century</p>
+
+<p class="subject">Subject: Geography and Geology</p>
+
+<p>
+Bouldering originated as a training activity for climbers and gradually developed into an independent sport. It involves climbing short rock formations or artificial walls without ropes, relying on strength, technique and problem-solving skills.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/026_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/026_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/026_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>ORIENTEERING</h3>
+
+<p class="date">20th Century – Present Day</p>
+
+<p class="subject">Subject: Physical Education</p>
+
+<p>
+Orienteering is an outdoor sport that combines physical activity, navigation and decision-making. Participants use maps and compasses to find specific checkpoints as quickly as possible.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/027_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/027_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/027_03.pdf" target="_blank">
+🖼️ Open Illustration 3
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/027_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>DISCOVERY OF EARTH'S INTERNAL STRUCTURE</h3>
+
+<p class="date">Prehistory – Present Scientific Knowledge</p>
+
+<p class="subject">Subject: Biology and Geology</p>
+
+<p>
+Scientists have discovered the internal structure of the Earth through the study of seismic waves generated by earthquakes. This research has revealed that our planet is composed of several layers, including the crust, mantle and core.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/028_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/028_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>THE GREAT DEPRESSION</h3>
+
+<p class="date">1929 – 1939</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Great Depression was a severe worldwide economic crisis that began in 1929 after the Wall Street Crash. Millions of people lost their jobs, businesses collapsed and poverty increased dramatically across many countries.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/029_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/029_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/029_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>THE SECOND WORLD WAR</h3>
+
+<p class="date">1939 – 1945</p>
+
+<p class="subject">Subject: History</p>
+
+<p>
+The Second World War was the largest and deadliest conflict in human history. It involved countries from across the world and resulted in profound political, social and economic changes that shaped the modern era.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/030_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/030_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>LA EVOLUCIÓN DEL SPANGLISH</h3>
+
+<p class="date">20th – 21st centuries</p>
+
+<p class="subject">Subject: Spanish Language and Literature</p>
+
+<p>
+Spanglish is a linguistic phenomenon that combines elements of Spanish and English. It has developed mainly in bilingual communities and reflects cultural identity, language contact and the influence of globalization.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/031_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/031_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇪🇸</p>
+
+</div>
+
+</div>
+<div class="timeline-card">
+
+<h3>TOURISM BOOM IN THE CANARY ISLANDS</h3>
+
+<p class="date">1960s – Present</p>
+
+<p class="subject">Subject: Geography</p>
+
+<p>
+Since the 1960s, tourism has become one of the main economic activities in the Canary Islands. The archipelago's mild climate, natural landscapes and modern infrastructure attract millions of visitors every year, contributing significantly to the local economy.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/032_01.pdf" target="_blank">
+🖼️ Open Illustration
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/032_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>FIRST MODERN ENERGY DRINK AND ITS RISKS</h3>
+
+<p class="date">1960s – Present</p>
+
+<p class="subject">Subject: Physical Education</p>
+
+<p>
+Modern energy drinks became increasingly popular during the second half of the twentieth century. Although they are marketed as products that improve performance and alertness, excessive consumption may pose significant health risks, especially among young people.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/033_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/033_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/033_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<div class="timeline-card">
+
+<h3>FIRST MODERN ELECTRONIC CIGARETTE AND ITS RISKS</h3>
+
+<p class="date">2003 – Present</p>
+
+<p class="subject">Subject: Physical Education</p>
+
+<p>
+The modern electronic cigarette was introduced in 2003 as an alternative to traditional tobacco products. Despite being promoted as a safer option, research has highlighted potential health risks associated with vaping, particularly among adolescents.
+</p>
+
+<div class="resources">
+
+<p>
+<a href="assets/images/timeline/034_01.pdf" target="_blank">
+🖼️ Open Illustration 1
+</a>
+</p>
+
+<p>
+<a href="assets/images/timeline/034_02.pdf" target="_blank">
+🖼️ Open Illustration 2
+</a>
+</p>
+
+<audio controls>
+<source src="assets/audio/034_01.mp3" type="audio/mpeg">
+</audio>
+
+<p>🎧 Audio Narration 🇬🇧</p>
+
+</div>
+
+</div>
+
+<a href="#top" class="back-to-top">↑</a>
+</body>
+</html>
+
